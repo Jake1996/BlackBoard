@@ -22,15 +22,11 @@
 	if(!isset($_SESSION['admin_id'])) {
 ?>
 
-<form  action = "login.php" method = "post">
-<p>Username:
-        <input type="text" name="username" value="" />
-      </p>
-      <p>Password:
-        <input type="password" name="password" value="" />
-      </p>
-      <input type="submit" name="submit" value="Submit" />
-</form>
+	<form  action = "login.php" method = "post">
+		<p>Username : <input type="text" name="username" value="" /></p>
+     		<p>Password : <input type="password" name="password" value="" /></p>
+      		<input type="submit" name="submit" value="Submit" />
+	</form>
 <?php } else echo "Logged in"; ?>
 </body>
 </html>
