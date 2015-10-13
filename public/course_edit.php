@@ -1,5 +1,5 @@
-<?php require_once("../includes/db_connection.php") ?>
-<?php require_once("../includes/functions.php") ?>
+<?php require_once("../includes/db_connection.php"); ?>
+<?php require_once("../includes/functions.php"); ?>
 <?php
 if (isset($_POST['submit'])) {
 	// Process the form
@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
 	$courseName = mysql_prep($_POST['courseName']);
 	$branch = mysql_prep($_POST['branch']);
 	$sem = mysql_prep($_POST['sem']);
-	$author = mysql_prep($_POST[author']);
+	$author = mysql_prep($_POST['author']);
 	$description = mysql_prep($_POST['description']);
 	$file = mysql_prep($_POST['file']);
 	$dateCreated = mysql_prep($_POST['dateCreated']);
@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
 	$query .= " courseCode, courseName, branch, sem, author,";
 	$query .=" description, file, dateCreated )";
 	$query .= " VALUES (";
-	$query .= " '{$courseCode}', '{$CourseName}', '{$branch}', {$sem}, '{$author}',"
+	$query .= " '{$courseCode}', '{$courseName}', '{$branch}', {$sem}, '{$author}',";
 	$query .= " '{$description}', '{$file}', '{$dateCreated}'";
 	$query .= " )";
 	$result = mysqli_query($connection, $query);
@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
 
 ?>
 <html>
-<head></head>
+<head><title>course management</title></head>
 <body>
 	<form action="course_edit.php" method="post">
 		<p>CourseCode : <input type="text" name="courseCode" value="" /></p>
@@ -50,7 +50,7 @@ if (isset($_POST['submit'])) {
 		<p>Author : <input type="text" name="author" value="" /></p>
 		<p>Description : <textarea name="description"></textarea></p>
 		<p>File : <input type="file" name="email" value="" /></p>
-		<p>Date : <input type="text" name="email" value="" /></p> <!--might have to change to get the current date -->
+		<p>Date : <input type="text" name="email" value="" /></p>
 		<p> <input type="submit" name="submit" value="submit" /></p>
 	</form>
 </body>
