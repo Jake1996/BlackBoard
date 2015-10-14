@@ -98,6 +98,22 @@
 			redirect_to("login.php");
 		}
 	}
+	function getBranch($branchName) {
+		global $connection;
 
+		$safe_branch = mysqli_real_escape_string($connection, $branchName);
+
+		$query  = "SELECT * ";
+		$query .= "FROM branch ";
+		$query .= "WHERE branchName = '{$safe_branch}' ";
+		$query .= "LIMIT 1";
+		$admin_set = mysqli_query($connection, $query);
+		confirm_query($admin_set);
+		if($admin = mysqli_fetch_assoc($admin_set)) {
+			return $admin;
+		} else {
+			return null;
+		}
+	}
 
 ?>

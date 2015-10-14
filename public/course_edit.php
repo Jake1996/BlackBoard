@@ -22,6 +22,8 @@ if (isset($_POST['submit'])) {
 	$result = mysqli_query($connection, $query);
 	if ($result) {
 		// Success
+		$branch = getBranch($branch);
+		//code to insert the courseCode to the branch table
 		redirect_to("login.php");
 	} else {
 		// Failure
