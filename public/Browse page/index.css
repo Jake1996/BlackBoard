@@ -1,0 +1,30 @@
+h1#header {
+	margin-top: 246px;
+	text-align: center;
+	font-family: Daydreamer;
+	font-size: 7em;
+}
+
+body {
+	background-image:url("background.jpg");
+}
+
+div.but {
+	text-align: center;
+	padding: 3px;
+
+}
+
+div#sign-up {
+	margin-top: 80px
+}
+
+button.btn-primary {
+	width: 250px;
+	background-color: black;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: white;
+}
+

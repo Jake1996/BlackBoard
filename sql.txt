@@ -28,5 +28,7 @@ create table admins
     -> (
     -> id int(5) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     -> username VARCHAR(64) NOT NULL,
-    -> hashedPassword varchar(64) NOT NULL);
+    -> hashedPassword varchar(64) NOT NULL)
+	email
+	name;
 
