@@ -1,0 +1,118 @@
+/*General Styles*/
+h2, th, td {
+    padding: 20px;
+    text-align: center;
+}
+
+table {
+	width: 100%;
+}
+
+ul {
+	list-style-type: none;
+}
+
+/*Styles for Computer Science Table*/
+
+
+table.CS td {
+	color: #0099CC;
+
+}
+
+table.CS td:hover {
+    background-color: #0099CC;
+    color: white;
+}
+
+table.CS th {
+	color: #0099CC;
+    
+}
+
+/*Styles for Electronics Table*/
+
+
+table.EC td {
+	color: #FF9933;
+    }
+
+table.EC td:hover {
+    background-color: #FF9933;
+    color: white;
+}
+
+table.EC th {
+	color: #FF9933;
+    
+}
+
+/*Styles for Mechanincal Table*/
+
+
+table.MC td {
+	color: #FF0066;
+    }
+
+table.MC td:hover {
+    background-color: #FF0066;
+    color: white;
+}
+
+table.MC th {
+	color: #FF0066;
+    
+}
+
+/*Styles for Biotechnology Table*/
+
+
+table.BT td {
+	color: #00CC99;
+    }
+
+table.BT td:hover {
+    background-color: #00CC99;
+    color: white;
+}
+
+table.BT th {
+	color: #00CC99;
+    
+}
+
+/*Styles for Civil Table*/
+
+
+table.CV td {
+	color: #00CC00;
+    }
+
+table.CV td:hover {
+    background-color: #00CC00;
+    color: white;
+}
+
+table.CV th {
+	color: #00CC00;
+    
+}
+
+/*Styles for Electrical Table*/
+
+
+table.EL td {
+	color: #CC6600;
+    }
+
+table.EL td:hover {
+    background-color: #CC6600;
+    color: white;
+}
+
+table.EL th {
+	color: #CC6600;
+    
+}
+
+
