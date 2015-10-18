@@ -1,5 +1,6 @@
 <?php
 
+	//all use functions
 	function confirm_query($result_set) {
 		if (!$result_set) {
 			die("Database query failed.");
@@ -18,6 +19,8 @@
 		$safe = mysqli_real_escape_string($connection,$string);
 		return $safe;
 	}
+
+	//functions for handling admin users
 	function find_admin_by_username($username) {
 		global $connection;
 
@@ -72,7 +75,7 @@
 	}
 
 	function attempt_login($username, $password) {
-		
+
 		$admin = find_admin_by_username($username);
 		if ($admin) {
 			// found admin, now check password
@@ -98,22 +101,101 @@
 			redirect_to("login.php");
 		}
 	}
-	function getBranch($branchName) {
+
+	//getting information functions
+	function getBranchByName($branchName) {
 		global $connection;
-
 		$safe_branch = mysqli_real_escape_string($connection, $branchName);
-
 		$query  = "SELECT * ";
 		$query .= "FROM branch ";
 		$query .= "WHERE branchName = '{$safe_branch}' ";
-		$query .= "LIMIT 1";
-		$admin_set = mysqli_query($connection, $query);
-		confirm_query($admin_set);
-		if($admin = mysqli_fetch_assoc($admin_set)) {
-			return $admin;
+		$branch_set = mysqli_query($connection, $query);
+		confirm_query($branch_set);
+		if($branch = mysqli_fetch_assoc($branch_set)) {
+			mysqli_free_result($branch_set);
+			return $branch;
 		} else {
 			return null;
 		}
+	}
+
+	function getAllBranches() {
+		global $connection;
+		$query = "SELECT branchName FROM branch";
+		$branch_set = mysqli_query($connection,$query);
+		confirm_query($branch_set);
+		return $branch_set;
+	}
+
+	function getAllCourses() {
+		global $connection;
+		$query = "select courseName,courseCode,branch,sem FROM course ORDER BY branch ASC,sem ASC";
+		$branch_set = mysqli_query($connection,$query);
+		confirm_query($branch_set);
+		return $branch_set;
+	}
+	
+	function getCourseByCode($courseCode) {
+		global $connection;
+		$safe_code = mysql_prep($courseCode);
+		$query = "SELECT * FROM course ";
+		$query .= "WHERE courseCode = '{$safe_code}'";
+		$course_set = mysqli_query($connection, $query);
+		if($course = mysqli_fetch_assoc($course_set)) {
+			return $course;
+		} else {
+			return null;
+		}
+	}
+	
+	function getCourseByBranch($branch) {
+		global $connection;
+		$safe_branch = mysql_prep($branch);
+		$query = "SELECT * FROM course ";
+		$query .= "WHERE branch = '{$safe_branch}'";
+		$course_set = mysqli_query($connection, $query);
+		confirm_query($course_set);
+		return $course_set;
+	}
+
+	function getCourseByBranchSem($branch,$sem) {
+		global $connection;
+		$safe_branch = mysql_prep($branch);
+		$query = "SELECT courseCode, courseName FROM course ";
+		$query .= "WHERE branch = '{$safe_branch}' AND sem={$sem}";
+		$course_set = mysqli_query($connection, $query);
+		confirm_query($course_set);
+		if($course_set) {
+			return $course_set;
+		}
+		else {
+			return null;
+		}
+
+	}
+
+	//delete functions for all three tables
+	function deleteBranchByName($branch) {
+		$safe_branch = mysql_prep($connection, $branch);
+		$query = "DELETE FROM branch WHERE ";
+		$query .= "branchName = '{$safe_branch}'";
+		$result = mysqli_query($connection, $query);
+		confirm_query($result);
+	}
+	
+	function deleteCourseByCode($courseCode) {
+		$safe_code = mysql_prep($courseCode);
+		$query = "DELETE FROM course WHERE ";
+		$query .= "courseCode = '{$safe_code}'";
+		$result = mysqli_query($connection, $query);
+		confirm_query($result);		
+	}
+
+	function deleteUserById($UserId) {
+		$query = "DELETE FROM admins WHERE ";
+		$query .= "id = {$id}";
+		$result = mysqli_query($connection, $query);
+		confirm_query($result);		
 	}
 
 ?>

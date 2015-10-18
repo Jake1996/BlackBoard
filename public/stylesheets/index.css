@@ -6,7 +6,7 @@ h1#header {
 }
 
 body {
-	background-image:url("background.jpg");
+	background-image:url("../../assets/images/background.jpg");
 }
 
 div.but {

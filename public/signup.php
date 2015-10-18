@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
 }
 
 ?>
-<html>
+<?php require_once("../includes/layouts/header.php"); ?>
 <head></head>
 <body>
 	<form action="signup.php" method="post">
@@ -37,3 +37,4 @@ if (isset($_POST['submit'])) {
 	</form>
 </body>
 </html>
+<?php require_once("../includes/layouts/footer.php"); ?>

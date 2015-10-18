@@ -9,6 +9,7 @@ if (isset($_POST['submit'])) {
 	$result = mysqli_query($connection, $query);
 	if ($result) {
 		// Success
+		mysqli_free_result($result);
 		redirect_to("login.php");
 	} else {
 		// Failure
@@ -19,10 +20,11 @@ if (isset($_POST['submit'])) {
 ?>
 <html>
 <head><title>course management</title></head>
-<body>
+<?php require_once("../includes/layouts/header.php"); ?>
 	<form action="branch_edit.php" method="post">
 		<p>Branch Name: <input type="text" name="branchName" value="" /></p>
 		<p> <input type="submit" name="submit" value="submit" /></p>
 	</form>
 </body>
 </html>
+<?php require_once("../includes/layouts/footer.php"); ?>

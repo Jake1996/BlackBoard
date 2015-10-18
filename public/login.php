@@ -3,7 +3,7 @@
 
 <html>
 <head></head>
-<body>
+<?php require_once("../includes/layouts/header.php"); ?>
 <?php	
 	if (isset($_POST['submit'])) {
 	$username = $_POST['username'];
@@ -30,3 +30,4 @@
 <?php } else echo "Logged in"; ?>
 </body>
 </html>
+<?php require_once("../includes/layouts/footer.php"); ?>

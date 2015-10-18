@@ -10,31 +10,38 @@ if (isset($_POST['submit'])) {
 	$author = mysql_prep($_POST['author']);
 	$description = mysql_prep($_POST['description']);
 	$file = mysql_prep($_POST['file']);
-	$dateCreated = mysql_prep($_POST['dateCreated']);
-
+	$datetime = date_create()->format('Y-m-d H:i:s');
+	//query to be done to insert into course table
 	$query  = "INSERT INTO course (";
 	$query .= " courseCode, courseName, branch, sem, author,";
 	$query .=" description, file, dateCreated )";
 	$query .= " VALUES (";
 	$query .= " '{$courseCode}', '{$courseName}', '{$branch}', {$sem}, '{$author}',";
-	$query .= " '{$description}', '{$file}', '{$dateCreated}'";
+	$query .= " '{$description}', '{$file}', '{$datetime}'";
 	$query .= " )";
 	$result = mysqli_query($connection, $query);
 	if ($result) {
+		mysqli_free_result($result);
 		// Success
-		$branchRef = getBranch($branch);
-		$courseList = branchRef["courseSem".$sem];
-		$courseList .= ";".$courseCode;
-		$query = " ";
+		$branchRef = getBranchByName($branch);
+		$column = "courseSem{$sem}";
+		$courseList = $branchRef[$column];
+		$courseList .= "{$courseCode};";
+		$safe_course = mysql_prep($courseList);
+		$query = "UPDATE branch SET ";
+		$query .= "courseSem{$sem} = '{$safe_course}' ";
+		$query .= "WHERE branchName = '{$branch}' LIMIT 1";
 		$result1 = mysqli_query($connection, $query);
+		$variable = print_r($branchRef);
 		if($result1)
 		{
-			redirect_to("login.php");
+			mysqli_free_result($result1);
+			redirect_to("login.php?{$variable}");
 		} else {
 		// Failure
 			redirect_to("signup.php");
 		}
-	//code to insert the courseCode to the branch table
+	//code to insert the courseCode to the branch table //still error in code
 	} else {
 		// Failure
 		redirect_to("signup.php");
@@ -44,7 +51,7 @@ if (isset($_POST['submit'])) {
 ?>
 <html>
 <head><title>course management</title></head>
-<body>
+<?php require_once("../includes/layouts/header.php"); ?>
 	<form action="course_edit.php" method="post">
 		<p>CourseCode : <input type="text" name="courseCode" value="" /></p>
 		<p>CourseName : <input type="text" name="courseName" value="" /></p>
@@ -62,8 +69,8 @@ if (isset($_POST['submit'])) {
 		<p>Author : <input type="text" name="author" value="" /></p>
 		<p>Description : <textarea name="description"></textarea></p>
 		<p>File : <input type="file" name="email" value="" /></p>
-		<p>Date : <input type="text" name="email" value="" /></p>
 		<p> <input type="submit" name="submit" value="submit" /></p>
 	</form>
 </body>
 </html>
+<?php require_once("../includes/layouts/footer.php"); ?>

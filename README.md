@@ -14,3 +14,11 @@
 #		all the required styles for the pages must be given here
 #	Scripts
 #		all the javascript files go in here	
+#assets
+#	All stuff related to files and graphics and helper classes that are downloaded
+#	images
+#		all images required in the website
+#	bootsrap
+#		the bootstrap helper
+#	uploads
+#		place for user uploaded files to be

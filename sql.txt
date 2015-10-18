@@ -8,7 +8,8 @@ CREATE TABLE course
     -> author varchar(64),
     -> description text,
     -> file varchar(128),
-    -> dateCreated Date);
+    -> dateCreated Date
+    );
 
 #Table for branches
 CREATE TABLE branch

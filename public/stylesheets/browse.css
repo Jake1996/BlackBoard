@@ -15,17 +15,17 @@ ul {
 /*Styles for Computer Science Table*/
 
 
-table.CS td {
+table.ComputerScienceandEngineering td {
 	color: #0099CC;
 
 }
 
-table.CS td:hover {
+table.ComputerScienceandEngineering td:hover {
     background-color: #0099CC;
     color: white;
 }
 
-table.CS th {
+table.ComputerScienceandEngineering th {
 	color: #0099CC;
     
 }
@@ -33,16 +33,16 @@ table.CS th {
 /*Styles for Electronics Table*/
 
 
-table.EC td {
+table.ElectricalandElectronicsEngineeringectronicsandCommunicationEngineering td {
 	color: #FF9933;
     }
 
-table.EC td:hover {
+table.ElectricalandElectronicsEngineeringectronicsandCommunicationEngineering td:hover {
     background-color: #FF9933;
     color: white;
 }
 
-table.EC th {
+table.ElectricalandElectronicsEngineeringectronicsandCommunicationEngineering th {
 	color: #FF9933;
     
 }
@@ -50,16 +50,16 @@ table.EC th {
 /*Styles for Mechanincal Table*/
 
 
-table.MC td {
+table.MechanicalEngineering td {
 	color: #FF0066;
     }
 
-table.MC td:hover {
+table.MechanicalEngineering td:hover {
     background-color: #FF0066;
     color: white;
 }
 
-table.MC th {
+table.MechanicalEngineering th {
 	color: #FF0066;
     
 }
@@ -67,16 +67,16 @@ table.MC th {
 /*Styles for Biotechnology Table*/
 
 
-table.BT td {
+table.Biotechnology td {
 	color: #00CC99;
     }
 
-table.BT td:hover {
+table.Biotechnology td:hover {
     background-color: #00CC99;
     color: white;
 }
 
-table.BT th {
+table.Biotechnology th {
 	color: #00CC99;
     
 }
@@ -84,16 +84,16 @@ table.BT th {
 /*Styles for Civil Table*/
 
 
-table.CV td {
+table.CivilEngineering td {
 	color: #00CC00;
     }
 
-table.CV td:hover {
+table.CivilEngineering td:hover {
     background-color: #00CC00;
     color: white;
 }
 
-table.CV th {
+table.CivilEngineering th {
 	color: #00CC00;
     
 }
@@ -101,16 +101,16 @@ table.CV th {
 /*Styles for Electrical Table*/
 
 
-table.EL td {
+table.ElectricalandElectronicsEngineering td {
 	color: #CC6600;
     }
 
-table.EL td:hover {
+table.ElectricalandElectronicsEngineering td:hover {
     background-color: #CC6600;
     color: white;
 }
 
-table.EL th {
+table.ElectricalandElectronicsEngineering th {
 	color: #CC6600;
     
 }
