@@ -2,6 +2,7 @@
 	position: sticky;
 	z-index: 5;
 	top: 0px;
+	width:100%;
 }
 #mynavbar ul ul {
 	display: none;
@@ -12,10 +13,11 @@
 }
 
 #mynavbar ul {
+	opacity: 2;
 	font-size: 15px;
 	font-weight:normal;
 	background: #efefef; 
-	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
+	background: linear-gradient(top, black 0%, #bbbbbb 100%);  
 	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
 	background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
 	box-shadow: 0px 0px 30px rgba(0,0,0,20);

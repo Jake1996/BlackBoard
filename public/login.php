@@ -2,7 +2,7 @@
 <?php require_once("../includes/functions.php") ?>
 
 <html>
-<head></head>
+<head><link rel="stylesheet" type="text/css" href="stylesheets/login.css"></head>
 <?php require_once("../includes/layouts/header.php"); ?>
 <?php	
 	if (isset($_POST['submit'])) {
@@ -21,12 +21,15 @@
 	}
 	if(!isset($_SESSION['admin_id'])) {
 ?>
-
+<div>
+<div id="login_form">
 	<form  action = "login.php" method = "post">
-		<p>Username : <input type="text" name="username" value="" /></p>
-     		<p>Password : <input type="password" name="password" value="" /></p>
-      		<input type="submit" name="submit" value="Submit" />
+		<p>Username : <input id="username_textbox" type="text" name="username" value="" /></p>
+     		<p>Password : <input id="password_textbox" type="password" name="password" value="" /></p>
+      		<input id="login_button" type="submit" name="submit" value="Login" />
 	</form>
+</div>
+<div>
 <?php } else echo "Logged in"; ?>
 </body>
 </html>
