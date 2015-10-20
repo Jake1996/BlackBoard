@@ -18,20 +18,24 @@
 	        $course_set = getAllCourses();
 	        if($course = mysqli_fetch_assoc($course_set))
 	        {
-	          $id = str_replace(' ', '', $course["branch"]);
+	          $id = htmlentities(str_replace(' ', '', $course["branch"]));
 	          $current_sem = $course["sem"];
-	          $output .= "<li><h2 id = \"{$id}\">{$course["branch"]}</h2>";
+	          $output .= "<li><h2 id = \"{$id}\">";
+	          $output .= htmlentities($course["branch"]);
+	          $output .= "</h2>";
 	          $output .= "<table class = \"{$id}\">";
 	          $current_branch = $course["branch"];
 	          $output .= "<tr><th>Sem {$current_sem}</th>";
-	          $output .= "<td id = \"{$course["courseCode"]}\">";
-	          $output .= $course["courseName"];
+	          $output .= "<td id = \"" . htmlentities($course["courseCode"]) . "\">";
+	          $output .= htmlentities($course["courseName"]);
 	          $output .= "</td>";
 	          while($course = mysqli_fetch_assoc($course_set)) {
 	            if($current_branch != $course["branch"]) {
-	              $id = str_replace(' ', '', $course["branch"]);
+	              $id = htmlentities(str_replace(' ', '', $course["branch"]));
 	              $output .= "</table></li>";
-	              $output .= "<li><h2 id = \"{$id}\">{$course["branch"]}</h2>";
+	              $output .= "<li><h2 id = \"{$id}\">";
+	        	  $output .= htmlentities($course["branch"]);
+	          	  $output .= "</h2>";
 	              $output .= "<table class = \"{$id}\">";
 	              $current_branch = $course["branch"];
 	              $current_sem = -1;
@@ -41,8 +45,8 @@
 	              $output .= "</tr>";
 	              $output .= "<tr><th>Sem {$current_sem}</th>";
 	            }
-	            $output .= "<td id = \"{$course["courseCode"]}\">";
-	            $output .= $course["courseName"];
+	            $output .= "<td id = \"" . htmlentities($course["courseCode"]) . "\">";
+	            $output .= htmlentities($course["courseName"]);
 	            $output .= "</td>";
 	          }
 	          $output .= "</table></li>";
