@@ -1,0 +1,21 @@
+table{
+	border:1px solid white
+	margin-top:10%;
+}
+
+td{
+	padding:10px;
+}
+
+input.custom-button {
+	padding: 8px 30px 8px 30px;
+	font-size: 18px;
+	background-color: black;
+	color: white;
+	font-family: Helvetica;
+	outline: none;
+}
+
+input#submit:hover {
+	background-color: #00CC66;
+}

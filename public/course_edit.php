@@ -49,6 +49,7 @@ if (isset($_POST['submit'])) {
 }
 
 ?>
+
 <html>
 <head><title>course management</title></head>
 <?php require_once("../includes/layouts/header.php"); ?>

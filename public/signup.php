@@ -25,15 +25,18 @@ if (isset($_POST['submit'])) {
 
 ?>
 <?php require_once("../includes/layouts/header.php"); ?>
-<head></head>
+<head><link rel="stylesheet" type="text/css" href="stylesheets/signup.css">
+</head>
 <body>
 	<form action="signup.php" method="post">
-		<p>Name : <input type="text" name="name" value="" /></p>
-		<p>Username : <input type="text" name="username" value="" /></p>
-		<p>Password : <input type="text" name="password" value="" /></p>
-		<p>Confirm Password : <input type="text" name="confirmPassword" value="" /></p>
-		<p>E-Mail : <input type="text" name="email" value="" /></p>
-		<p> <input type="submit" name="submit" value="submit" /></p>
+	<table align="center">
+		<p><tr><td>Name : </td> <td> <input type="text" name="name" value="" /></p></td></tr>
+		<p><tr><td>Username : </td> <td><input type="text" name="username" value="" /></p></td></tr>
+		<p><tr><td>Password : </td> <td><input type="text" name="password" value="" /></p></td></tr>
+		<p><tr><td>Confirm Password : </td> <td><input type="text" name="confirmPassword" value="" /></p></td></tr>
+		<p><tr><td>E-Mail : </td> <td><input type="text" name="email" value="" /></p></td></tr>
+		<p><tr><td colspan="2" align="center"><input type="submit" name="submit" value="Submit" class = "custom-button" id = "submit"/></p></td></tr>
+	</table>
 	</form>
 </body>
 </html>
