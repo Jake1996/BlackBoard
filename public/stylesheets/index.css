@@ -1,8 +1,20 @@
+@font-face {
+    font-family: header-font;
+    src: url(../../assets/Daydreamer.ttf);
+}
+
+@font-face {
+    font-family: button-font;
+    src: url(../../assets/Verdana.ttf);
+}
+
 h1#header {
 	margin-top: 246px;
 	text-align: center;
-	font-family: Daydreamer;
-	font-size: 7em;
+	font-weight: normal;
+	color: #2c2929;
+	font-family: header-font;
+	font-size: 6em;
 }
 
 body {
@@ -11,20 +23,58 @@ body {
 
 div.but {
 	text-align: center;
-	padding: 3px;
+	padding: 13px;
 
 }
 
 div#sign-up {
-	margin-top: 80px
+	margin-top: 74px
 }
 
-button.btn-primary {
-	width: 250px;
+a.custom-button {
+	padding: 10px 100px 10px 100px;
+	font-size: 18px;
 	background-color: black;
+	text-decoration: none;
+	color: white;
+	font-family: Helvetica;
+	border-radius: 20px;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-    background: white;
+div.log {
+	text-align: right;
+	margin-top: 17px;
+}
+
+a#contribute {
+	padding: 10px 94px 10px 94px;
+}
+
+a#browse {
+	padding: 10px 106px 10px 106px;
+}
+
+a#sign-up {
+	padding: 10px 103px 10px 103px;
+}
+
+a#sign-up:hover {
+	background-color: #00CC66;
+}
+
+a#browse:hover {
+	background-color: #0099CC;
+}
+
+a#contribute:hover {
+	background-color: #FF3399;
+}
+
+a#login {
+	padding: 10px 50px 10px 50px ;
+}
+
+a#login:hover {
+	background-color: #009933;
 }
 

@@ -51,7 +51,10 @@ if (isset($_POST['submit'])) {
 ?>
 
 <html>
-<head><title>course management</title></head>
+<head>
+	<title>course management</title>
+	<link type="text/css" href = "stylesheets/reset.css" /> 
+</head>
 <?php require_once("../includes/layouts/header.php"); ?>
 	<form action="course_edit.php" method="post">
 		<p>CourseCode : <input type="text" name="courseCode" value="" /></p>

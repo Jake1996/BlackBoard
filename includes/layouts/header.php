@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="stylesheets/NavbarStylings.css">
+<link type="text/css" href = "stylesheets/reset.css" /> 
 <body>
 <nav id="mynavbar">
 	<ul>
