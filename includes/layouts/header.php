@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="stylesheets/NavbarStylings.css">
-<link type="text/css" href = "stylesheets/reset.css" /> 
+<link rel="stylesheet" type="text/css" href="stylesheets/NavbarStylings.css"> 
 <body>
+<div class = "row">	
 <nav id="mynavbar">
 	<ul>
 		<li><a href="#">Home</a></li>
@@ -51,3 +51,4 @@
 		</li>	
 	</ul>
 </nav>
+</div>
