@@ -1,21 +1,12 @@
 #mynavbar{
-	position: relative;
-	z-index: 5;
-	top: 0px;
-	margin-top: -23px;
+	
 }
 #mynavbar ul ul {
 	display: none;
 }
 
-div.row {
-	width: 1900px;
-	margin-left: -10px;
-}
-
 #mynavbar ul li:hover > ul {
 	display: block;
-
 }
 
 #mynavbar ul {
@@ -33,6 +24,7 @@ div.row {
 	position: relative;
 	display: inline-table;
 	width: 100%;
+	text-align: center;
 }
 
 #mynavbar ul:after {
@@ -46,20 +38,11 @@ div.row {
 	margin-top: -1px;
 }
 
-#searchbox{
-	position: relative;
-	float: right;
-	margin-right:20px;
-}
-
 #mynavbar ul li:hover {
-	background: #00CC66;
+	background: #5f6975;
 	transition-property: background-color;
     transition-duration: 0.6s;
     transition-delay: 0s;
-	/*background: linear-gradient(top, #4f5964 0%, #5f6975 40%);*/
-	/*background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);*/
-	/*background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);*/
 }
 
 #mynavbar ul li:hover a {
@@ -109,7 +92,7 @@ div.row {
 	left: 100%; 
 	top:0;
 	margin-top:1px;
-	width:100%;
+	width:35%;
 }
 /*From */
 #mynavbar ul ul ul li {
@@ -132,7 +115,7 @@ div.row {
 	left: 100%; 
 	top:0;
 	margin-top:1px;
-	width:100%;
+	width:400%;
 }
 
 #mynavbar ul ul ul ul li a:hover {
