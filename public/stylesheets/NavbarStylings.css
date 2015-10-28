@@ -1,6 +1,7 @@
 #mynavbar{
-	
+
 }
+
 #mynavbar ul ul {
 	display: none;
 }
@@ -10,21 +11,20 @@
 }
 
 #mynavbar ul {
-	/*opacity: 2;*/
 	font-size: 15px;
 	font-weight:normal;
-	background: white;
+	background: transparent;
 	color: black; 
-	/*background: linear-gradient(top, black 0%, #bbbbbb 100%);  */
-	/*background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); */
-	/*background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); */
-	/*box-shadow: 0px 0px 30px rgba(0,0,0,20);*/
 	padding: 0;
 	list-style: none;
 	position: relative;
 	display: inline-table;
-	width: 100%;
+	width: 115%;
 	text-align: center;
+}
+
+#mynavbar ul:hover{
+	border-bottom: 1px solid grey;
 }
 
 #mynavbar ul:after {

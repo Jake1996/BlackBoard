@@ -4,6 +4,10 @@ h2, th, td {
     text-align: center;
 }
 
+h1 {
+    padding: 10px;
+}
+
 table {
 	width: 100%;
 }
