@@ -1,15 +1,11 @@
 /*General Styles*/
-h2 {
+h2, th, td {
     padding: 10px;
     text-align: center;
 }
 
 table {
 	width: 100%;
-}
-
-td {
-    padding: 20px;
 }
 
 ul {
@@ -21,15 +17,20 @@ ul {
 
 table.ComputerScienceandEngineering td {
 	color: #0099CC;
+    padding:15px;
+
 }
 
 table.ComputerScienceandEngineering td:hover {
     background-color: #0099CC;
     color: white;
+
 }
 
 table.ComputerScienceandEngineering th {
 	color: #0099CC;
+    padding:15px;
+    width: 10%;
     
 }
 
@@ -38,6 +39,7 @@ table.ComputerScienceandEngineering th {
 
 table.ElectricalandElectronicsEngineeringectronicsandCommunicationEngineering td {
 	color: #FF9933;
+    padding:15px;
     }
 
 table.ElectricalandElectronicsEngineeringectronicsandCommunicationEngineering td:hover {
@@ -47,6 +49,7 @@ table.ElectricalandElectronicsEngineeringectronicsandCommunicationEngineering td
 
 table.ElectricalandElectronicsEngineeringectronicsandCommunicationEngineering th {
 	color: #FF9933;
+    padding:15px;
     
 }
 
@@ -55,6 +58,7 @@ table.ElectricalandElectronicsEngineeringectronicsandCommunicationEngineering th
 
 table.MechanicalEngineering td {
 	color: #FF0066;
+    padding:15px;
     }
 
 table.MechanicalEngineering td:hover {
@@ -64,6 +68,7 @@ table.MechanicalEngineering td:hover {
 
 table.MechanicalEngineering th {
 	color: #FF0066;
+    padding:15px;
     
 }
 
@@ -72,6 +77,7 @@ table.MechanicalEngineering th {
 
 table.Biotechnology td {
 	color: #00CC99;
+    padding:15px;
     }
 
 table.Biotechnology td:hover {
@@ -81,6 +87,7 @@ table.Biotechnology td:hover {
 
 table.Biotechnology th {
 	color: #00CC99;
+    padding:15px;
     
 }
 
@@ -89,6 +96,7 @@ table.Biotechnology th {
 
 table.CivilEngineering td {
 	color: #00CC00;
+    padding:15px;
     }
 
 table.CivilEngineering td:hover {
@@ -98,6 +106,7 @@ table.CivilEngineering td:hover {
 
 table.CivilEngineering th {
 	color: #00CC00;
+    padding:15px;
     
 }
 
@@ -106,6 +115,7 @@ table.CivilEngineering th {
 
 table.ElectricalandElectronicsEngineering td {
 	color: #CC6600;
+    padding:15px;
     }
 
 table.ElectricalandElectronicsEngineering td:hover {
@@ -115,6 +125,7 @@ table.ElectricalandElectronicsEngineering td:hover {
 
 table.ElectricalandElectronicsEngineering th {
 	color: #CC6600;
+    padding:15px;
     
 }
 
