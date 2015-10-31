@@ -18,13 +18,22 @@ if (isset($_POST['submit'])) {
 }
 
 ?>
-<html>
-<head><title>course management</title></head>
-<?php require_once("../includes/layouts/header.php"); ?>
-	<form action="branch_edit.php" method="post">
-		<p>Branch Name: <input type="text" name="branchName" value="" /></p>
-		<p> <input type="submit" name="submit" value="submit" /></p>
-	</form>
-</body>
+<html>	
+	<link rel="stylesheet" type="text/css" href="stylesheets/branch_edit.css">
+	<link rel="stylesheet" type="text/css" href="../assets/bootstrap/bootstrap.min.css">
+	<head><title>course management</title></head>
+	<body>
+		<div class = "container-fluid">
+			<div class = "row form">
+				<div class = "col-md-12">
+					<?php require_once("../includes/layouts/header.php"); ?>
+					<form action="branch_edit.php" method="post" class = "formstyle">
+						<p>Branch Name: <input type="text" name="branchName" value="" /></p>
+						<p> <input type="submit" name="submit" value="submit" class = "button"/></p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
 <?php require_once("../includes/layouts/footer.php"); ?>

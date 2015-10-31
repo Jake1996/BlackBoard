@@ -1,0 +1,13 @@
+input.button {
+	background-color: black;
+	border-radius: 10px;
+	color: white;
+	padding: 8px 20px 8px 20px;
+
+}
+
+input.button:hover
+
+form.formstyle {
+	padding: 20px;
+}

@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="stylesheets/NavbarStylings.css">
 <link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap.min.css">  
 <body>
-<div class = "container-fluid">
+
 	<div class = "row">
 		<div class = "col-md-12">	
 			<nav id="mynavbar">
@@ -60,4 +60,4 @@
 			</nav>
 		</div>
 	</div>
-</div>
+</body>

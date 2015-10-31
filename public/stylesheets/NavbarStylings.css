@@ -1,6 +1,7 @@
 #mynavbar{
-	
+
 }
+
 #mynavbar ul ul {
 	display: none;
 }
@@ -10,21 +11,26 @@
 }
 
 #mynavbar ul {
-	/*opacity: 2;*/
 	font-size: 15px;
 	font-weight:normal;
-	background: white;
+	background: transparent;
 	color: black; 
-	/*background: linear-gradient(top, black 0%, #bbbbbb 100%);  */
-	/*background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); */
-	/*background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); */
-	/*box-shadow: 0px 0px 30px rgba(0,0,0,20);*/
 	padding: 0;
 	list-style: none;
 	position: relative;
 	display: inline-table;
-	width: 100%;
+	width: 115%;
 	text-align: center;
+	transition-property: background;
+    transition-duration: 0.2s;
+    transition-delay: 0.1s;
+}
+
+#mynavbar ul:hover{
+	background-color: black;
+	transition-property: background-color;
+    transition-duration: 0.4s;
+    transition-delay: 0.1s;
 }
 
 #mynavbar ul:after {
@@ -39,17 +45,17 @@
 }
 
 #mynavbar ul li:hover {
-	background: #5f6975;
+	background-color: 3A80FF;
 	transition-property: background-color;
     transition-duration: 0.6s;
-    transition-delay: 0s;
+    transition-delay: 0.1s;
 }
 
 #mynavbar ul li:hover a {
-	color: #fff;
+	color: white;
 	transition-property: background-color;
     transition-duration: 0.6s;
-    transition-delay: 0s;
+    transition-delay: 0.1s;
 }
 	
 #mynavbar ul li a {
@@ -69,7 +75,7 @@
 	top: 100%;
 	transition-property: background-color;
     transition-duration: 0.6s;
-    transition-delay: 0s;
+    transition-delay: 0.1s;
 }
 
 #mynavbar ul ul li {
@@ -83,7 +89,7 @@
 }	
 
 #mynavbar ul ul li a:hover {
-	background: #0099CC;
+	background: #37b250;
 
 }
 
@@ -107,7 +113,7 @@
 }	
 
 #mynavbar ul ul ul li a:hover {
-	background: #FF3399;
+	background: #F651EB;
 }
 
 #mynavbar ul ul ul ul {
@@ -119,5 +125,5 @@
 }
 
 #mynavbar ul ul ul ul li a:hover {
-	background: #FF6600;
+	background: #E3881B;
 }

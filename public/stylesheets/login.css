@@ -1,25 +1,10 @@
-div#login_form{
-	position:absolute;
-	margin-top:10%;
-	margin-left:32%;
-	margin-bottom:25% ;
-	margin-right:25%;
-	padding:30px;
-	border:1px solid blue;
+
+table, td {
+	border: 1px solid red;
+	border-collapse: separate;
 }
 
-#username_textbox{
-	position:relative;
-	margin-left:30px;
-}
-
-#password_textbox{
-	position:relative;
-	margin-left:35px;
-}
-
-#login_button{
-	position:relative;
-	margin-left:40%;
-	margin-right:40%;
+td.input {
+	padding: 10px;
+	text-align: center;
 }
