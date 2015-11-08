@@ -33,6 +33,10 @@
     transition-delay: 0.1s;
 }
 
+#mynavbar ul:hover{
+	border-bottom: 1px solid grey;
+}
+
 #mynavbar ul:after {
 	content: ""; 
 	clear: both; 
