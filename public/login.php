@@ -22,26 +22,24 @@
 	}
 	if(!isset($_SESSION['admin_id'])) {
 ?>
-<div class = "row">
-	<div class = "col-md-12">
-<div id="login_form">
-	<table>
-		<form  action = "login.php" method = "post">
-			<tr>
-				<td>Username : </td>
-				<td><input id="username_textbox" type="text" name="username" value="" /></td>
-			</tr>
-			<tr>
-     			<td>Password : </td>
-     			<td><input id="password_textbox" type="password" name="password" value="" /></td>
-      		</tr>
-      		<tr>
-      			<td colspan = "2"><input id="login_button" type="submit" name="submit" value="Login" /></td>
-      		</tr>
-		</form>
-	</table>
-</div>
-<div>
+		<div id="login_form">
+			<form  action = "login.php" method = "post">
+				<table align = "center">	
+					<p><tr>
+						<td style = "padding : '10px'">Username : </td>
+						<td><input id="username_textbox" type="text" name="username" value="" /></p></td>
+					</tr>
+					<tr>
+     					<td>Password : </td>
+     					<td><input id="password_textbox" type="password" name="password" value="" /></td>
+      				</tr>
+      				<tr>
+      					<td colspan = "2"><input id="login_button" type="submit" name="submit" value="Login" class = "custom-button"/></td>
+      				</tr>
+				</table>
+			</form>
+		</div>
+
 <?php } else echo "Logged in"; ?>
 </body>
 </html>

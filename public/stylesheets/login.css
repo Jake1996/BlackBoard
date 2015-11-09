@@ -1,10 +1,24 @@
+table{
+	border:1px solid black;
+	margin-top: 10%;
 
-table, td {
-	border: 1px solid red;
-	border-collapse: separate;
 }
 
-td.input {
-	padding: 10px;
-	text-align: center;
+td{
+	padding:10px;
+}
+
+input.custom-button {
+	padding: 8px 30px 8px 30px;
+	font-size: 18px;
+	background-color: black;
+	color: white;
+	font-family: Helvetica;
+	border: none;
+	border-radius: 20px;
+	
+}
+
+input#submit:hover {
+	background-color: #00CC66;
 }

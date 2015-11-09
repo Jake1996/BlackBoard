@@ -1,6 +1,6 @@
 table{
-	border:1px solid white
-	margin-top:10%;
+	border:1px solid white;
+	margin-top: 10%;
 }
 
 td{
@@ -13,7 +13,9 @@ input.custom-button {
 	background-color: black;
 	color: white;
 	font-family: Helvetica;
-	outline: none;
+	border: none;
+	border-radius: 20px;
+	
 }
 
 input#submit:hover {
