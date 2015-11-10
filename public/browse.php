@@ -27,7 +27,7 @@
 	          $current_branch = $course["branch"];
 	          $output .= "<tr><th>Sem {$current_sem}</th>";
 	          $output .= "<td id = \"" . htmlentities($course["courseCode"]) . "\">";
-	          $output .= htmlentities($course["courseName"]);
+	          $output .= "<a href=\"course.php?courseId={$course["courseCode"]}\">". htmlentities($course["courseName"]) . "</a>";
 	          $output .= "</td>";
 	          while($course = mysqli_fetch_assoc($course_set)) {
 	            if($current_branch != $course["branch"]) {
@@ -46,7 +46,7 @@
 	              $output .= "<tr><th>Sem {$current_sem}</th>";
 	            }
 	            $output .= "<td id = \"" . htmlentities($course["courseCode"]) . "\">";
-	            $output .= htmlentities($course["courseName"]);
+	            $output .= "<a href=\"course.php?courseId={$course["courseCode"]}\">". htmlentities($course["courseName"]) . "</a>";
 	            $output .= "</td>";
 	          }
 	          $output .= "</table></li>";

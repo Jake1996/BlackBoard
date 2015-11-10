@@ -197,5 +197,39 @@
 		$result = mysqli_query($connection, $query);
 		confirm_query($result);		
 	}
-
+	function upload() {
+		$target_dir = "../assets/uploads/";
+		$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+		$uploadOk = 1;
+		$FileType = pathinfo($target_file,PATHINFO_EXTENSION);
+		
+		// Check if file already exists
+		if (file_exists($target_file)) {
+		    echo "Sorry, file already exists.";
+		    $uploadOk = 0;
+		}
+		// Check file size 10mb
+		if ($_FILES["fileToUpload"]["size"] > 10000000) {
+		    $uploadOk = 0;
+		    //file too large
+		}
+		
+		if(is_executable($target_file)) {
+		    $uploadOk = 0;
+		    //file is executable
+		}
+		
+		// Check if $uploadOk is set to 0 by an error
+		if ($uploadOk == 1) {
+		    return;
+		// if everything is ok, try to upload file
+		}
+		else {
+		    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+		        return $target_file;
+		    } else {
+		        return;
+		    }
+		}
+	}
 ?>

@@ -14,7 +14,7 @@ else {
 	echo "Author : ".$course['author']."<br />";
 	echo "Date Created : ".$course['dateCreated']."<br />";
 	echo "Description : ".$course['description']."<br />";
-	echo "Files(Refrences) : ";//$course['file'];
+	echo "Files(Refrence) : <a href=\"{$course['file']}\" >download</a>";
 }
 ?>
 </html>
