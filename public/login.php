@@ -40,8 +40,13 @@
 			</form>
 		</div>
 
-<?php } else echo "Logged in";
-redirect_to("browse.php"); ?>
+<?php } 
+else 
+{
+	echo "Logged in";
+	redirect_to("browse.php"); 
+}
+?>
 </body>
 </html>
 <?php require_once("../includes/layouts/footer.php"); ?>
