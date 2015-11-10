@@ -1,7 +1,7 @@
 <?php
 	define("DB_SERVER","localhost");
 	// define("DB_USER","blackusr");
-	define("DB_USER","root");
+	define("DB_USER","blackusr");
 	define("DB_PASS","jake");
 	define("DB_NAME","blackboard");
 

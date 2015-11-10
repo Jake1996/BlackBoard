@@ -6,7 +6,7 @@
 		<div class = "col-md-12">	
 			<nav id="mynavbar">
 				<ul>
-					<li><a href="#">Home</a></li>
+					<li><a href="browse.php">Home</a></li>
 					<li><a href="#">Courses</a>
 						<?php
 		    	    		$output ="";
@@ -24,7 +24,7 @@
 	    	      				$output .= "<li><a href = \"#\">Sem {$current_sem}</a><ul>";
 	    	      				$output .= "<li id = \"";
 	    	     		 		$output .= htmlentities($course["courseCode"]) . "\">";
-	    	     		 		$output .= "<a href \"#\">". htmlentities($course["courseName"]) . "</a>";
+	    	     		 		$output .= "<a href=\"course.php?courseId={$course["courseCode"]}\">". htmlentities($course["courseName"]) . "</a>";
 	    	    	  			$output .= "</li>";
 	    	      				while($course = mysqli_fetch_assoc($course_set)) 
 	        			  		{
@@ -47,7 +47,7 @@
 	            						$output .= "<li><a href=\"#\">Sem {$current_sem}</a><ul>";
 	            					}
 	            					$output .= "<li id = \"" .htmlentities($course["courseCode"]) ."\">";
-	          						$output .= "<a href \"#\">" . htmlentities($course["courseName"]) . "</a>";
+	          						$output .= "<a href=\"course.php?courseId={$course["courseCode"]}\">" . htmlentities($course["courseName"]) . "</a>";
 	         						$output .= "</li>";
 	         					}
 	          					mysqli_free_result($course_set);
