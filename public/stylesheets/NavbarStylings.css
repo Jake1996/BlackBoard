@@ -13,7 +13,7 @@
 #mynavbar ul {
 	font-size: 15px;
 	font-weight:normal;
-	background: transparent;
+	background: black;
 	color: black; 
 	padding: 0;
 	list-style: none;
@@ -134,7 +134,13 @@
 }
 
 div.loginInput {
-	margin-top: 14px;
+	margin-top: 7px;
+}
+
+div.loginInput > input {
+	border: 2px solid grey;
+	background-color: black;
+	color: white;
 }
 
 li#loginFeild {
@@ -142,6 +148,43 @@ li#loginFeild {
 }
 
 
-li#loginFeild:hover {
-	background-color: red;
+li.loginFeild:hover {
+	background-color: black !important;
+}
+
+input.username {
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	padding: 8px;
+	margin-left: 10px;
+}
+
+input.username:focus {
+	outline: none;
+}
+
+input.password {
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	padding: 8px;
+	margin-left: 10px;
+}
+
+input.password:focus {
+	outline: none;
+}
+
+.submit {
+	margin-right: 10px;
+	padding: 10px;
+	border-radius: 100%;
+	background-color: grey;
+}
+
+.submit:focus {
+	outline: none;
+}
+
+.submit:hover {
+	background-color: white;
 }

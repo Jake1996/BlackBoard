@@ -6,14 +6,15 @@
 		<div class = "col-md-12">	
 			<nav id="mynavbar">
 				<ul>
-					<li style = "float:right;" id = "loginFeild">				
+					<li style = "float:right;" id = "loginFeild" class = "loginFeild">				
 						<div class = "loginInput">
-							<input type = "text" value = "Username" />
-							<input type = "password" value = password />
+							<input type = "text" value = "Username" class = "username"/>
+							<input type = "password" value = password class = "password"/>
+							<button class = "submit"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></button>
 						</div>
 					</li>	
-					<li style = "float: right;" class = "loginButton" onclick = "appear()"><a href = "#">Login in</a></li>
-					<li style = "float: right;" class ><a href = "#">Sign Up</a></li>				
+					<li style = "float: right;" class = "loginButton" onclick = "appear()"><a href = "#">Login in</a></li>		
+					<li><a href = "#">Sign Up</a></li>		
 					<li><a href="#">Courses</a>
 						<?php
 		    	    		$output ="";
@@ -63,6 +64,7 @@
 	        				echo $output;
 	    				?>
 					</li>
+
 				</ul>
 			</nav>
 		</div>
