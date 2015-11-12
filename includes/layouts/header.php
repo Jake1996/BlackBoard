@@ -6,7 +6,14 @@
 		<div class = "col-md-12">	
 			<nav id="mynavbar">
 				<ul>
-					<li><a href="browse.php">Home</a></li>
+					<li style = "float:right;" id = "loginFeild">				
+						<div class = "loginInput">
+							<input type = "text" value = "Username" />
+							<input type = "password" value = password />
+						</div>
+					</li>	
+					<li style = "float: right;" class = "loginButton" onclick = "appear()"><a href = "#">Login in</a></li>
+					<li style = "float: right;" class ><a href = "#">Sign Up</a></li>				
 					<li><a href="#">Courses</a>
 						<?php
 		    	    		$output ="";
@@ -55,9 +62,21 @@
 	        				$output .= "</ul>";
 	        				echo $output;
 	    				?>
-					</li>	
+					</li>
 				</ul>
 			</nav>
 		</div>
 	</div>
 </body>
+<script>
+	var login = document.getElementById("loginButton");
+	var inputFields = document.getElementById("loginFeild")
+	
+	function appear()
+	{
+		inputFields.style.display = (inputFields.style.display == "none") ? "block" : "none"; 
+	}
+
+	
+
+</script>

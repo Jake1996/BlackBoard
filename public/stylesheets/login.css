@@ -1,6 +1,6 @@
 table{
-	border:1px solid black;
 	margin-top: 10%;
+	text-align: center;
 
 }
 
@@ -19,6 +19,15 @@ input.custom-button {
 	
 }
 
-input#submit:hover {
-	background-color: #00CC66;
+input.custom-button:hover {
+	background-color: #3A80FF;
+}
+
+#password_textbox, #username_textbox {
+	height: 25px;
+	width: 200px;
+}
+
+#password_textbox:focus, #username_textbox:focus {
+	background-color: #99CCFF;
 }

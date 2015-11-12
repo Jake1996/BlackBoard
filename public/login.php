@@ -4,7 +4,7 @@
 
 <html>
 <head><link rel="stylesheet" type="text/css" href="stylesheets/login.css"></head>
-<?php require_once("../includes/layouts/header.php"); ?>
+<!--<?php require_once("../includes/layouts/header.php"); ?>-->
 <?php	
 	if (isset($_POST['submit'])) {
 	$username = $_POST['username'];
