@@ -5,6 +5,12 @@
 <html>
 <head><link rel="stylesheet" type="text/css" href="stylesheets/login.css"></head>
 <!--<?php require_once("../includes/layouts/header.php"); ?>-->
+<?php 
+	if(isset($_SESSION['message'])) {
+		echo $_SESSION['message'];
+		$_SESSION['message']=null;
+	}
+?>
 <?php	
 	if (isset($_POST['submit'])) {
 	$username = $_POST['username'];
