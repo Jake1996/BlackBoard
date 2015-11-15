@@ -1,6 +1,6 @@
-<link rel="stylesheet" type="text/css" href="stylesheets/NavbarStylings.css">
-<link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap.min.css">  
 <body>
+<link rel="stylesheet" type="text/css" href="stylesheets/NavbarStylings.css" />
+<link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap.min.css" />  
 
 	<div class = "row">
 		<div class = "col-md-12">	
@@ -35,7 +35,8 @@
 					<li><a href = "#">BlackBoard</a>
 					<ul>
 					<?php if(!isset($_SESSION['username'])) { ?>
-					<li><a href = "signup.php">Sign Up</a> <?php }?></li>
+					<li><a href = "signup.php">Sign Up</a></li> 
+					<?php }?>
 					<li><a href = "new_course.php">Contribute</a></li>
 					</ul>
 					</li>		
@@ -90,9 +91,11 @@
 					</li>
 
 				</ul>
+		
 			</nav>
 		</div>
 	</div>
+<?php	if(!isset($_SESSION['username'])) { ?>
 <script>
 	var login = document.getElementById("loginButton");
 	var inputFields = document.getElementById("loginFeild")
@@ -108,3 +111,5 @@
 	}
 
 </script>
+<?php }
+?>

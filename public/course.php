@@ -1,58 +1,60 @@
+<?php require_once("../includes/db_connection.php"); ?>
+<?php require_once("../includes/session.php"); ?>
+<?php require_once("../includes/functions.php"); ?>
+<?php 
+	if(!isset($_GET['courseId'])) {
+		if(isset($_SESSION['message'])) {
+		echo $_SESSION['message'];
+		$_SESSION['message']=null;
+		echo "please select a course";
+		}
+	} 
+	else {
+		$course1 = getCourseByCode($_GET['courseId']);
+?>
 <html>
 <head>
-	<title>ECHO TITLE</title>
+	<title><?php echo $course1['courseName']; ?></title>
 	<link rel="stylesheet" type="text/css" href="stylesheets/course.css">
 </head>
-
-<?php require_once("../includes/db_connection.php"); ?>
-<?php require_once("../includes/functions.php"); ?>
-<?php
-require_once("../includes/layouts/header.php"); 
-if(!isset($_GET['courseId'])) {
-	echo "please select a course";
-} 
-else {
-	$course = getCourseByCode($_GET['courseId']);
-?>
-
-<html>
+<?php require_once("../includes/layouts/header.php"); ?>
 	<h1>Course Details</h1>
 		<table>
 			<tr>
 				<td>Course Name : </td>
-				<td><?php echo $course['courseName']; ?></td>
+				<td><?php echo $course1['courseName']; ?></td>
 			</tr>
 			<tr>
 				<td>Course Code : </td>
-				<td><?php echo $course['courseCode']; ?></td>
+				<td><?php echo $course1['courseCode']; ?></td>
 			</tr>
 			<tr>
 				<td>Branch : </td>
-				<td><?php echo $course['branch']; ?></td>
+				<td><?php echo $course1['branch']; ?></td>
 			</tr>
 			<tr>
 				<td>Semester : </td>
-				<td><?php echo $course['sem']; ?></td>
+				<td><?php echo $course1['sem']; ?></td>
 			</tr>
 			<tr>
 				<td>Author : </td>
-				<td><?php echo $course['author']; ?></td>
+				<td><?php echo $course1['author']; ?></td>
 			</tr>
 			<tr>
 				<td>Date Created : </td>
-				<td><?php echo $course['dateCreated']; ?></td>
+				<td><?php echo $course1['dateCreated']; ?></td>
 			</tr>
 			<tr>
 				<td>Description : </td>
-				<td><?php echo $course['description']; ?></td>
+				<td><?php echo $course1['description']; ?></td>
 			</tr>
 			<tr>
 				<td>Download : </td>
-				<td><?php echo $course['file']; ?></td>
+				<td><?php echo $course1['file']; ?></td>
 			</tr>
 		</table>
 		<br />
 <a href="course_edit.php?courseId=<?php echo $course['courseCode']; ?>">Edit Course</a>
 <a href="delete_course.php?courseId=<?php echo $course['courseCode']; ?>">Delete Course</a>
-		<?php } ?>
 <?php require_once("../includes/layouts/footer.php"); ?>
+<?php } ?>
