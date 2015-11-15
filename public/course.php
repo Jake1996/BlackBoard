@@ -54,7 +54,7 @@
 			</tr>
 		</table>
 		<br />
-<a href="course_edit.php?courseId=<?php echo $course['courseCode']; ?>">Edit Course</a>
-<a href="delete_course.php?courseId=<?php echo $course['courseCode']; ?>">Delete Course</a>
+<a href="course_edit.php?courseId=<?php echo $course1['courseCode']; ?>">Edit Course</a>
+<a href="delete_course.php?courseId=<?php echo $course1['courseCode']; ?>">Delete Course</a>
 <?php require_once("../includes/layouts/footer.php"); ?>
 <?php } ?>
