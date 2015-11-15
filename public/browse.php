@@ -59,6 +59,5 @@
 	      ?>
 		<div>
 	<div>	
-</body>
-</html>
+
 <?php require_once("../includes/layouts/footer.php"); ?>

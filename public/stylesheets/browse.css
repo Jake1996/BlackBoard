@@ -12,6 +12,15 @@ table {
 	width: 100%;
 }
 
+table > a {
+    text-decoration: none;
+    display: block;
+}
+
+table > a:hover {
+    text-decoration: none;
+}
+
 ul {
 	list-style-type: none;
 }

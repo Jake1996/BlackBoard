@@ -18,7 +18,7 @@
 							</form>
 							<button class = "submit" onclick="submitform()"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></button>
 						</div>
-					</li>	
+					</li>
 					<li style = "float: right;" class = "loginButton" onclick = "appear()"><a href = "#">Login in</a></li>		
 					<?php }
 					else {
@@ -93,7 +93,6 @@
 			</nav>
 		</div>
 	</div>
-</body>
 <script>
 	var login = document.getElementById("loginButton");
 	var inputFields = document.getElementById("loginFeild")
@@ -102,8 +101,10 @@
 	{
 		inputFields.style.display = (inputFields.style.display == "none") ? "block" : "none"; 
 	}
+
 	function submitform()
 	{
   		document.getElementById("myform").submit();
 	}
+
 </script>
