@@ -36,10 +36,10 @@ if (isset($_POST['submit'])) {
 		$query .= "WHERE branchName = '{$branch}' LIMIT 1";
 		$result1 = mysqli_query($connection, $query);
 		if($result1)
-		{
+		{n
 			mysqli_free_result($result1);
 			redirect_to("login.php");
-		} else {
+		} else 
 		// Failure
 			redirect_to("signup.php");
 		}
@@ -87,6 +87,4 @@ if (isset($_POST['submit'])) {
 		<p>File : <input type="file" name="email" value="" /></p>
 		<p> <input type="submit" name="submit" value="Submit" /></p>
 	</form>
-</body>
-</html>
 <?php require_once("../includes/layouts/footer.php"); ?>

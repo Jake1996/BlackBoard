@@ -57,10 +57,8 @@
 	      ?>
 		<div>
 	<div>	
-</body>
 <script type="text/javascript">
 var x = document.getElementById("c1-y4-cs");
 x.innerHTML = "Chemistry";
 </script>
-</html>
 <?php require_once("../includes/layouts/footer.php"); ?>

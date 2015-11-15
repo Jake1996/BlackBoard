@@ -6,14 +6,21 @@
 		<div class = "col-md-12">	
 			<nav id="mynavbar">
 				<ul>
+					<?php
+						if(isset($_SESSION['username'])) {
+
+						}
+						else {
+					?>
 					<li style = "float:right;" id = "loginFeild" class = "loginFeild">				
 						<div class = "loginInput">
 							<input type = "text" value = "Username" class = "username"/>
 							<input type = "password" value = password class = "password"/>
-							<button class = "submit"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></button>
+							<button type = "submit" class = "submit" action="login.php"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></button>
 						</div>
-					</li>	
+					</li>
 					<li style = "float: right;" class = "loginButton" onclick = "appear()"><a href = "#">Login in</a></li>		
+					<?php } ?>
 					<li><a href = "#">Sign Up</a></li>		
 					<li><a href="#">Courses</a>
 						<?php
@@ -69,7 +76,6 @@
 			</nav>
 		</div>
 	</div>
-</body>
 <script>
 	var login = document.getElementById("loginButton");
 	var inputFields = document.getElementById("loginFeild")
@@ -78,7 +84,4 @@
 	{
 		inputFields.style.display = (inputFields.style.display == "none") ? "block" : "none"; 
 	}
-
-	
-
 </script>
