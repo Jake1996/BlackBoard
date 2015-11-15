@@ -17,5 +17,7 @@ else {
 	echo "Files(Refrence) : <a href=\"{$course['file']}\" >download</a>";
 }
 ?>
+<a href="course_edit.php?courseId=<?php echo $course['courseCode']; ?>">Edit Course</a>
+<a href="delete_course.php?courseId=<?php echo $course['courseCode']; ?>">Delete Course</a>
 </html>
 <?php require_once("../includes/layouts/footer.php"); ?>

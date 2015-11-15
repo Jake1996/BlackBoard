@@ -6,15 +6,39 @@
 		<div class = "col-md-12">	
 			<nav id="mynavbar">
 				<ul>
+					<?php
+						if(!isset($_SESSION['username'])) {
+					?>
 					<li style = "float:right;" id = "loginFeild" class = "loginFeild">				
 						<div class = "loginInput">
-							<input type = "text" value = "Username" class = "username"/>
-							<input type = "password" value = password class = "password"/>
-							<button class = "submit"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></button>
+							<form id="myform" action="login.php" method="post">
+								<input type = "text" name="username" value = "Username" class = "username"/>
+								<input type = "password" name="password" value = "password" class = "password"/>
+								<input type="submit" name="submit" value="submit" >
+							</form>
+							<button class = "submit" onclick="submitform()"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></button>
 						</div>
 					</li>	
 					<li style = "float: right;" class = "loginButton" onclick = "appear()"><a href = "#">Login in</a></li>		
-					<li><a href = "#">Sign Up</a></li>		
+					<?php }
+					else {
+					?>
+					<li style = "float: right;" class = "profile" ><a href="#"><?php echo $_SESSION['username']; ?></a>
+						<ul>
+							<li style="color: white;"><a href="profile_edit.php">Edit Profile</a></li>
+							<li style="color: white;"><a href="logout.php">Logout</a></li>
+						</ul>
+					</li>
+					<?php
+					}
+					?>
+					<li><a href = "#">BlackBoard</a>
+					<ul>
+					<?php if(!isset($_SESSION['username'])) { ?>
+					<li><a href = "signup.php">Sign Up</a> <?php }?></li>
+					<li><a href = "new_course.php">Contribute</a></li>
+					</ul>
+					</li>		
 					<li><a href="#">Courses</a>
 						<?php
 		    	    		$output ="";
@@ -78,7 +102,8 @@
 	{
 		inputFields.style.display = (inputFields.style.display == "none") ? "block" : "none"; 
 	}
-
-	
-
+	function submitform()
+	{
+  		document.getElementById("myform").submit();
+	}
 </script>

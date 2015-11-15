@@ -1,5 +1,7 @@
 <?php require_once("../includes/db_connection.php"); ?>
 <?php require_once("../includes/functions.php"); ?>
+<?php require_once("../includes/session.php"); ?>
+
 <html>
 <head>
 	<title>Browse</title>
@@ -58,9 +60,5 @@
 		<div>
 	<div>	
 </body>
-<script type="text/javascript">
-var x = document.getElementById("c1-y4-cs");
-x.innerHTML = "Chemistry";
-</script>
 </html>
 <?php require_once("../includes/layouts/footer.php"); ?>

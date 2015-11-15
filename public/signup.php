@@ -19,6 +19,7 @@ if (isset($_POST['submit'])) {
 		redirect_to("login.php");
 	} else {
 		// Failure
+		$_SESSION['message']="Invalid Usename/Password";
 		redirect_to("signup.php");
 	}
 }
@@ -28,6 +29,14 @@ if (isset($_POST['submit'])) {
 <head><link rel="stylesheet" type="text/css" href="stylesheets/signup.css">
 </head>
 <body>
+<p class="message">
+<?php 
+	if(isset($_SESSION['message'])) {
+		echo $_SESSION['message'];
+		$_SESSION['message']=null;
+	}
+?>
+</p>
 	<form action="signup.php" method="post">
 	<table align="center">
 		<p><tr><td>Name : </td> <td> <input type="text" name="name" value="" /></p></td></tr>

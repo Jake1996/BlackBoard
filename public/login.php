@@ -18,7 +18,7 @@
 		$_SESSION["username"] = $found_admin["username"];
 	}
 	else {
-		echo "not logged in";}
+		echo "Incorrect Username/Password";}
 	}
 	if(!isset($_SESSION['admin_id'])) {
 ?>
@@ -35,6 +35,10 @@
       				</tr>
       				<tr>
       					<td colspan = "2"><input id="login_button" type="submit" name="submit" value="Login" class = "custom-button"/></td>
+      				</tr>
+      				<tr>
+      					<td>Dont have an account?</td>
+      					<td><a href="signup.php">Sign Up</a></td>
       				</tr>
 				</table>
 			</form>
