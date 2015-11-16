@@ -197,19 +197,18 @@
 		$result = mysqli_query($connection, $query);
 		confirm_query($result);		
 	}
-	function upload() {
+	function upload($file) {
 		$target_dir = "../assets/uploads/";
-		$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+		$target_file = $target_dir . basename($file["name"]);
 		$uploadOk = 1;
 		$FileType = pathinfo($target_file,PATHINFO_EXTENSION);
-		
 		// Check if file already exists
 		if (file_exists($target_file)) {
 		    echo "Sorry, file already exists.";
 		    $uploadOk = 0;
 		}
 		// Check file size 10mb
-		if ($_FILES["fileToUpload"]["size"] > 10000000) {
+		if ($file["size"] > 10000000) {
 		    $uploadOk = 0;
 		    //file too large
 		}
@@ -220,12 +219,12 @@
 		}
 		
 		// Check if $uploadOk is set to 0 by an error
-		if ($uploadOk == 1) {
+		if ($uploadOk == 0) {
 		    return;
 		// if everything is ok, try to upload file
 		}
 		else {
-		    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+		    if (move_uploaded_file($file["tmp_name"], $target_file)) {
 		        return $target_file;
 		    } else {
 		        return;

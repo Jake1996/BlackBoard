@@ -2,7 +2,9 @@
 <?php require_once("../includes/session.php"); ?>
 <?php require_once("../includes/functions.php"); ?>
 <?php 
+
 	if(!isset($_GET['courseId'])) {
+		require_once("../includes/layouts/header.php");
 		if(isset($_SESSION['message'])) {
 		echo $_SESSION['message'];
 		$_SESSION['message']=null;
@@ -50,7 +52,7 @@
 			</tr>
 			<tr>
 				<td>Download : </td>
-				<td><?php echo $course1['file']; ?></td>
+				<td><a href="<?php echo $course1['file']; ?>">link</a></td>
 			</tr>
 		</table>
 		<br />

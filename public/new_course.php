@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
 	$sem = mysql_prep($_POST['sem']);
 	$author = $_SESSION["username"];
 	$description = mysql_prep($_POST['description']);
-	$file = upload();
+	$file = mysql_prep(upload($_FILES["fileToUpload"]));
 	//$file = mysql_prep($_POST['file']);
 	$datetime = date_create()->format('Y-m-d H:i:s');
 	//query to be done to insert into course table
@@ -68,7 +68,7 @@ if (isset($_POST['submit'])) {
 	}
 ?>
 </p>
-	<form action="new_course.php" method="post">
+	<form action="new_course.php" method="post"  enctype="multipart/form-data">
 		<p>CourseCode : <input type="text" name="courseCode" value="" /></p>
 		<p>CourseName : <input type="text" name="courseName" value="" /></p>
 		<p>Branch : <select name="branch">
@@ -83,18 +83,18 @@ if (isset($_POST['submit'])) {
 		?>
  		</select>
 		<p>Sem :<select name="sem">
-			<option name="1">1</option>
-			<option name="2">2</option>
-			<option name="3">3</option>
-			<option name="4">4</option>
-			<option name="5">5</option>
-			<option name="6">6</option>
-			<option name="7">7</option>
-			<option name="8">8</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
 			</select></p>
 		<p>Description :<br /> <textarea name="description"></textarea><br />
 		*Enter description of the course can use html elements like table etc</p>
-		<p>File : <input type="file" name="email" value="" /></p>
+		<p>File : <input type="file" name="fileToUpload" id="fileToUpload" /></p>
 		<p> <input type="submit" name="submit" value="Submit" /></p>
 	</form>
 </body>

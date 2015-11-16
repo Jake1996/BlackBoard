@@ -6,6 +6,10 @@ if (isset($_POST['submit'])) {
 	// Process the form
 	$name = mysql_prep($_POST['name']);
 	$username = mysql_prep($_POST['username']);
+	if($_POST['password']!=$_POST['confirmPassword']) {
+		$_SESSION['message']="Invalid Password";
+		redirect_to("signup.php");
+	}
 	$password = mysql_prep($_POST['password']);
 	$email = mysql_prep($_POST['email']);
 	$hashedPassword = password_encrypt($password);

@@ -9,6 +9,15 @@
 	<link rel="stylesheet" type="text/css" href="stylesheets/browse.css">
 </head>
 <?php require_once("../includes/layouts/header.php"); ?>
+	<p class="message">
+		<?php 
+			if(isset($_SESSION['message'])) {
+				echo $_SESSION['message'];
+				$_SESSION['message']=null;
+			}
+		?>
+	</p>
+
 	<h1>Courses</h1>
 	<div class = "row">
 		<div class = "col-md-12">
