@@ -23,8 +23,8 @@
 	<h1 align = center>Course Details</h1>
 		<table align = center>
 			<tr>
-				<td>Course Name : </td>
-				<td><?php echo $course1['courseName']; ?></td>
+				<td width = "10%">Course Name : </td>
+				<td width = "60%"><?php echo $course1['courseName']; ?></td>
 			</tr>
 			<tr>
 				<td>Course Code : </td>
@@ -47,7 +47,7 @@
 				<td><?php echo $course1['dateCreated']; ?></td>
 			</tr>
 			<tr>
-				<td>Description : </td>
+				<td>Description  </td>
 				<td><?php echo $course1['description']; ?></td>
 			</tr>
 			<tr>

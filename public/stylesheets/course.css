@@ -7,9 +7,13 @@ tr,td {
 	padding: 10px !important;
 }
 
+table {
+  margin: 30px !important;
+}
+
 a.button {
   display: block;
-  width: 50%;
+  width: 200px;
   height: 50%;
   background: white;
   padding: 10px;

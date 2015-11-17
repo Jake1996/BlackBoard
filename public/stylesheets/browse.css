@@ -1,7 +1,11 @@
 /*General Styles*/
-h2, th, td {
-    padding: 10px;
+h2, td {
+    padding: 15px;
     text-align: center;
+}
+
+th {
+    padding: 20px !important;
 }
 
 h1 {
@@ -9,14 +13,12 @@ h1 {
 }
 
 table {
-	width: 100%;
-    z-index: -1;
+	width: 95%;
 }
 
 td > a {
     text-decoration: none;
     display: block;
-    padding: 11px;
 }
 
 td > a:hover {
@@ -31,118 +33,16 @@ ul {
 /*Styles for Computer Science Table*/
 
 
-table.ComputerScienceandEngineering td {
-	color: #0099CC;
+table td {
+    color: #0099CC;
     padding:15px;
-
 }
 
-table.ComputerScienceandEngineering td:hover {
+table td:hover {
     background-color: #0099CC;
     color: white;
-
 }
 
-table.ComputerScienceandEngineering th {
-	color: #0099CC;
-    padding:15px;
-    width: 10%;
-    
-}
 
-/*Styles for Electronics Table*/
-
-
-table.ElectricalandElectronicsEngineeringectronicsandCommunicationEngineering td {
-	color: #FF9933;
-    padding:15px;
-    }
-
-table.ElectricalandElectronicsEngineeringectronicsandCommunicationEngineering td:hover {
-    background-color: #FF9933;
-    color: white;
-}
-
-table.ElectricalandElectronicsEngineeringectronicsandCommunicationEngineering th {
-	color: #FF9933;
-    padding:15px;
-    
-}
-
-/*Styles for Mechanincal Table*/
-
-
-table.MechanicalEngineering td {
-	color: #FF0066;
-    padding:15px;
-    }
-
-table.MechanicalEngineering td:hover {
-    background-color: #FF0066;
-    color: white;
-}
-
-table.MechanicalEngineering th {
-	color: #FF0066;
-    padding:15px;
-    
-}
-
-/*Styles for Biotechnology Table*/
-
-
-table.Biotechnology td {
-	color: #00CC99;
-    padding:15px;
-    }
-
-table.Biotechnology td:hover {
-    background-color: #00CC99;
-    color: white;
-}
-
-table.Biotechnology th {
-	color: #00CC99;
-    padding:15px;
-    
-}
-
-/*Styles for Civil Table*/
-
-
-table.CivilEngineering td {
-	color: #00CC00;
-    padding:15px;
-    }
-
-table.CivilEngineering td:hover {
-    background-color: #00CC00;
-    color: white;
-}
-
-table.CivilEngineering th {
-	color: #00CC00;
-    padding:15px;
-    
-}
-
-/*Styles for Electrical Table*/
-
-
-table.ElectricalandElectronicsEngineering td {
-	color: #CC6600;
-    padding:15px;
-    }
-
-table.ElectricalandElectronicsEngineering td:hover {
-    background-color: #CC6600;
-    color: white;
-}
-
-table.ElectricalandElectronicsEngineering th {
-	color: #CC6600;
-    padding:15px;
-    
-}
 
 
