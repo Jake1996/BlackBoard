@@ -7,10 +7,11 @@ h2, th, td {
 h1 {
     padding: 10px;
 }
-
+div.row1 {
+    z-index: -2;
+}
 table {
 	width: 100%;
-    z-index: -1;
 }
 
 td > a {
