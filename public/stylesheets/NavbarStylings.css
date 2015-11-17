@@ -1,7 +1,9 @@
 #mynavbar{
 
 }
-
+div.row {
+	z-index: 2;
+}
 html, body {
 	overflow-x:hidden;
 }

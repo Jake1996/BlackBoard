@@ -5,7 +5,6 @@
 <html>
 <head>
 	<title>Browse</title>
-	<link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/browse.css">
 </head>
 <?php require_once("../includes/layouts/header.php"); ?>
@@ -19,8 +18,8 @@
 	</p>
 
 	<h1>Courses</h1>
-	<div class = "row">
-		<div class = "col-md-12">
+	<div class = "row1">
+		<div class = "">
 	      <?php
 	        $output ="";
 	        $output .="<ul id = \"navmenu\">";

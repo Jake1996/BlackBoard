@@ -11,9 +11,15 @@ th {
 h1 {
     padding: 10px;
 }
-
+div.row1 {
+    z-index: -2;
+}
 table {
+<<<<<<< HEAD
 	width: 95%;
+=======
+	width: 100%;
+>>>>>>> origin/master
 }
 
 td > a {

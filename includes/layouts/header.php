@@ -31,7 +31,7 @@
 					<?php
 					}
 					?>
-					<li><a href = "#">OpenNoteWare</a>
+					<li><a href = "browse.php">OpenNoteWare</a>
 						<ul class = "home">
 							<?php if(!isset($_SESSION['username'])) { ?>
 							<li><a href = "signup.php">Sign Up</a></li> 
