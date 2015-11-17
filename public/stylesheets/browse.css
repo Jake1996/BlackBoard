@@ -17,7 +17,7 @@ table {
 td > a {
     text-decoration: none;
     display: block;
-    padding: 11px;
+    padding: 19px;
 }
 
 td > a:hover {
@@ -34,7 +34,7 @@ ul {
 
 table.ComputerScienceandEngineering td {
 	color: #0099CC;
-    padding:15px;
+    
 
 }
 
@@ -56,7 +56,7 @@ table.ComputerScienceandEngineering th {
 
 table.ElectricalandElectronicsEngineeringectronicsandCommunicationEngineering td {
 	color: #FF9933;
-    padding:15px;
+    
     }
 
 table.ElectricalandElectronicsEngineeringectronicsandCommunicationEngineering td:hover {
@@ -75,7 +75,7 @@ table.ElectricalandElectronicsEngineeringectronicsandCommunicationEngineering th
 
 table.MechanicalEngineering td {
 	color: #FF0066;
-    padding:15px;
+    
     }
 
 table.MechanicalEngineering td:hover {
@@ -94,7 +94,7 @@ table.MechanicalEngineering th {
 
 table.Biotechnology td {
 	color: #00CC99;
-    padding:15px;
+   
     }
 
 table.Biotechnology td:hover {
@@ -113,7 +113,7 @@ table.Biotechnology th {
 
 table.CivilEngineering td {
 	color: #00CC00;
-    padding:15px;
+   
     }
 
 table.CivilEngineering td:hover {
@@ -132,7 +132,7 @@ table.CivilEngineering th {
 
 table.ElectricalandElectronicsEngineering td {
 	color: #CC6600;
-    padding:15px;
+    
     }
 
 table.ElectricalandElectronicsEngineering td:hover {
