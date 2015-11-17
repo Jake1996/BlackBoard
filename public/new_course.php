@@ -94,6 +94,7 @@ if (isset($_POST['submit'])) {
 		$_SESSION['message']=null;
 	}
 ?>
+<<<<<<< HEAD
 <h1></h1>
 <form action="new_course.php" method="post"  enctype="multipart/form-data">
 <table align = center>
@@ -154,6 +155,37 @@ if (isset($_POST['submit'])) {
 				<td colspan = 2 align = center><input type="submit" name="submit" value="Submit" class = "button"/></td>
 			</tr>
 		</table>
+=======
+</p>
+	<form action="new_course.php" method="post"  enctype="multipart/form-data">
+		<p>CourseCode : <input type="text" name="courseCode" value="" /></p>
+		<p>CourseName : <input type="text" name="courseName" value="" /></p>
+		<p>Branch : <select name="branch">
+		<?php
+			$output = "";
+			$branch_set = getAllBranches();
+			while($branch = mysqli_fetch_assoc($branch_set)) {
+				$output .= "<option value=\"{$branch['branchName']}\">{$branch['branchName']}</option>";
+			}
+			mysqli_free_result($branch_set);
+			echo $output;
+		?>
+		</select>
+		<p>Semester :<select name="sem">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			</select></p>
+		<p>Description :<br /> <textarea name="description"></textarea><br />
+		*Enter description of the course can use html elements like table etc</p>
+		<p>File : <input type="file" name="fileToUpload" id="fileToUpload" /></p>
+		<p> <input type="submit" name="submit" value="Submit" /></p>
+>>>>>>> origin/master
 	</form>
 </body>
 </html>
