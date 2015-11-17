@@ -23,8 +23,8 @@
 	<h1 align = center>Course Details</h1>
 		<table align = center>
 			<tr>
-				<td>Course Name : </td>
-				<td><?php echo $course1['courseName']; ?></td>
+				<td width = "10%">Course Name : </td>
+				<td width = "60%"><?php echo $course1['courseName']; ?></td>
 			</tr>
 			<tr>
 				<td>Course Code : </td>
@@ -47,7 +47,7 @@
 				<td><?php echo $course1['dateCreated']; ?></td>
 			</tr>
 			<tr>
-				<td>Description : </td>
+				<td>Description  </td>
 				<td><?php echo $course1['description']; ?></td>
 			</tr>
 			<tr>
@@ -55,10 +55,8 @@
 				<td><a href="<?php echo $course1['file']; ?>" class = "button">Notes</a></td>
 			</tr>
 			<tr>
-				<td colspan = 2 style = "text-align: center"><a href="course_edit.php?courseId=<?php echo $course1['courseCode']; ?>" class = "button">Edit Course</a></td>
-			</tr>
-			<tr>
-				<td colspan = 2 style = "text-align: center"><a href="delete_course.php?courseId=<?php echo $course1['courseCode']; ?>" class = "button">Delete Course</a></td>
+				<td style = "text-align: center"><a href="course_edit.php?courseId=<?php echo $course1['courseCode']; ?>" class = "button">Edit Course</a></td>
+				<td style = "text-align: center"><a href="delete_course.php?courseId=<?php echo $course1['courseCode']; ?>" class = "button">Delete Course</a></td>
 			</tr>
 		</table>
 		<br />

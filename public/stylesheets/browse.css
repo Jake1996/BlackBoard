@@ -1,7 +1,12 @@
 /*General Styles*/
-h2, th, td {
-    padding: 10px;
+h2, td {
+    padding: 20px;
     text-align: center;
+    font-size: 14px;
+}
+
+th {
+    padding: 20px !important;
 }
 
 h1 {
@@ -11,13 +16,15 @@ div.row1 {
     z-index: -2;
 }
 table {
-	width: 100%;
+	width: 95%;
+    background-color: #f2f2f2 !important;
 }
 
 td > a {
     text-decoration: none;
     display: block;
     padding: 19px;
+
 }
 
 td > a:hover {
@@ -34,11 +41,9 @@ ul {
 
 table.ComputerScienceandEngineering td {
 	color: #0099CC;
-    
+   } 
 
-}
-
-table.ComputerScienceandEngineering td:hover {
+table td:hover {
     background-color: #0099CC;
     color: white;
 
@@ -112,8 +117,7 @@ table.Biotechnology th {
 
 
 table.CivilEngineering td {
-	color: #00CC00;
-   
+	color: #00CC00;  
     }
 
 table.CivilEngineering td:hover {
@@ -121,18 +125,9 @@ table.CivilEngineering td:hover {
     color: white;
 }
 
-table.CivilEngineering th {
-	color: #00CC00;
-    padding:15px;
-    
-}
-
-/*Styles for Electrical Table*/
-
 
 table.ElectricalandElectronicsEngineering td {
-	color: #CC6600;
-    
+	color: #CC6600;  
     }
 
 table.ElectricalandElectronicsEngineering td:hover {
@@ -145,5 +140,4 @@ table.ElectricalandElectronicsEngineering th {
     padding:15px;
     
 }
-
 
