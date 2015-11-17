@@ -10,15 +10,18 @@ h1 {
 
 table {
 	width: 100%;
+    z-index: -1;
 }
 
-table > a {
+td > a {
     text-decoration: none;
     display: block;
+    padding: 11px;
 }
 
-table > a:hover {
-    text-decoration: none;
+td > a:hover {
+    text-decoration: none !important;
+    color: white;
 }
 
 ul {

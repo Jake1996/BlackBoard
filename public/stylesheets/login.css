@@ -23,6 +23,7 @@ input.custom-button {
   	font-weight: bold;
   	border: 2px solid #cc0000;
   	font-size: 14px;
+  	margin-left: 25%;
 	
 }
 
@@ -54,6 +55,7 @@ a.sign-up {
   	font-weight: bold;
   	border: 2px solid #cc0000;
   	text-decoration: none;
+  	margin-left: 20%;
 }
 
 a.sign-up:hover {
