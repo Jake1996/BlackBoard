@@ -1,13 +1,11 @@
 /*General Styles*/
 h2, td {
-    padding: 20px;
     text-align: center;
     font-size: 14px;
 }
 
 th {
-    padding: 20px !important;
-}
+    }
 
 h1 {
     padding: 10px;
@@ -23,6 +21,9 @@ table {
 td > a {
     text-decoration: none;
     display: block;
+    height: 100%;        
+    width: 100%;
+    padding: 10px;
 }
 
 td > a:hover {
@@ -39,7 +40,7 @@ ul {
 
 table td {
     color: #0099CC;
-    padding:15px;
+    
 }
 
 table td:hover {
