@@ -77,7 +77,6 @@
 					</select></p>
 				<p>Description :<br /> <textarea name="description"><?php echo $course1['description']; ?></textarea><br />
 				*Enter description of the course can use html elements like table etc</p>
-				<p>File : <input type="file" name="email" value="<?php echo $course1['file']; ?>" /></p>
 				<p> <input type="submit" name="submit" value="Submit" /></p>
 			</form>
 			<?php require_once("../includes/layouts/footer.php"); ?>
