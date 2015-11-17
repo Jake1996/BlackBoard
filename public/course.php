@@ -55,10 +55,8 @@
 				<td><a href="<?php echo $course1['file']; ?>" class = "button">Notes</a></td>
 			</tr>
 			<tr>
-				<td colspan = 2 style = "text-align: center"><a href="course_edit.php?courseId=<?php echo $course1['courseCode']; ?>" class = "button">Edit Course</a></td>
-			</tr>
-			<tr>
-				<td colspan = 2 style = "text-align: center"><a href="delete_course.php?courseId=<?php echo $course1['courseCode']; ?>" class = "button">Delete Course</a></td>
+				<td style = "text-align: center"><a href="course_edit.php?courseId=<?php echo $course1['courseCode']; ?>" class = "button">Edit Course</a></td>
+				<td style = "text-align: center"><a href="delete_course.php?courseId=<?php echo $course1['courseCode']; ?>" class = "button">Delete Course</a></td>
 			</tr>
 		</table>
 		<br />
