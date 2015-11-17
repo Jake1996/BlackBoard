@@ -10,7 +10,9 @@
 	    $found_admin = attempt_login($username,$password );
 	    $hashedPassword = $found_admin['hashedPassword'];
 	    if($found_admin) {
-	    	$password=$_POST['confirmPassword'];
+	    	if($_POST['confirmPassword']!="") {
+	    		$password=$_POST['confirmPassword'];
+	    	}
 	    	$hashedPassword = password_encrypt($password);
 	    	mysqli_free_result($found_admin);
 	    }

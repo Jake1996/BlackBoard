@@ -81,7 +81,6 @@ if (isset($_POST['submit'])) {
 			mysqli_free_result($branch_set);
 			echo $output;
 		?>
- 		</select>
 		<p>Semester :<select name="sem">
 			<option name="1">1</option>
 			<option name="2">2</option>
