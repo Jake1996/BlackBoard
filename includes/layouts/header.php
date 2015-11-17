@@ -14,31 +14,30 @@
 							<form id="myform" action="login.php" method="post">
 								<input type = "text" name="username" value = "Username" class = "username"/>
 								<input type = "password" name="password" value = "password" class = "password"/>
-								<input type="submit" name="submit" value="submit" >
+								<input type="submit" name="submit" value="submit" class = "submit" />
 							</form>
-							<button class = "submit" onclick="submitform()"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></button>
 						</div>
 					</li>
 					<li style = "float: right;" class = "loginButton" onclick = "appear()"><a href = "#">Login in</a></li>		
 					<?php }
 					else {
 					?>
-					<li style = "float: right;" class = "profile" ><a href="#"><?php echo $_SESSION['username']; ?></a>
-						<ul>
-							<li style="color: white;"><a href="profile_edit.php">Edit Profile</a></li>
-							<li style="color: white;"><a href="logout.php">Logout</a></li>
+					<li style = "float: right;" class = "profile"><a href="#"><?php echo $_SESSION['username']; ?></a>
+						<ul class = "editProfile">
+							<li ><a href="profile_edit.php">Edit Profile</a></li>
+							<li><a href="logout.php">Logout</a></li>
 						</ul>
 					</li>
 					<?php
 					}
 					?>
-					<li><a href = "#">BlackBoard</a>
-					<ul>
-					<?php if(!isset($_SESSION['username'])) { ?>
-					<li><a href = "signup.php">Sign Up</a></li> 
-					<?php }?>
-					<li><a href = "new_course.php">Contribute</a></li>
-					</ul>
+					<li><a href = "#">OpenNoteWare</a>
+						<ul class = "home">
+							<?php if(!isset($_SESSION['username'])) { ?>
+							<li><a href = "signup.php">Sign Up</a></li> 
+							<?php }?>
+							<li><a href = "new_course.php">Contribute</a></li>
+						</ul>
 					</li>		
 					<li><a href="#">Courses</a>
 						<?php

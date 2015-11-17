@@ -43,8 +43,10 @@
       					<td colspan = "2"><input id="login_button" type="submit" name="submit" value="Login" class = "custom-button"/></td>
       				</tr>
       				<tr>
-      					<td>Dont have an account?</td>
-      					<td><a href="signup.php">Sign Up</a></td>
+      					<td colspan = "2">Dont have an account?</td>
+      				</tr>
+      				<tr>
+      					<td colspan = "2"><a href="signup.php" class = "sign-up">Sign Up</a></td>
       				</tr>
 				</table>
 			</form>

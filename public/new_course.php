@@ -82,6 +82,7 @@ if (isset($_POST['submit'])) {
 			echo $output;
 		?>
  		</select>
+<<<<<<< Updated upstream
 		<p>Sem :<select name="sem">
 			<option value="1">1</option>
 			<option value="2">2</option>
@@ -91,6 +92,17 @@ if (isset($_POST['submit'])) {
 			<option value="6">6</option>
 			<option value="7">7</option>
 			<option value="8">8</option>
+=======
+		<p>Semester :<select name="sem">
+			<option name="1">1</option>
+			<option name="2">2</option>
+			<option name="3">3</option>
+			<option name="4">4</option>
+			<option name="5">5</option>
+			<option name="6">6</option>
+			<option name="7">7</option>
+			<option name="8">8</option>
+>>>>>>> Stashed changes
 			</select></p>
 		<p>Description :<br /> <textarea name="description"></textarea><br />
 		*Enter description of the course can use html elements like table etc</p>

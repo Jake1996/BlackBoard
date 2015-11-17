@@ -31,3 +31,18 @@ input.custom-button:hover {
 #password_textbox:focus, #username_textbox:focus {
 	background-color: #99CCFF;
 }
+
+a.sign-up {
+	background-color: black;
+	padding: 13px;
+	border-radius: 25px;
+	color: white;
+	text-decoration: none;
+	font-size: 18px;
+	font-family: Helvetica;
+}
+
+a.sign-up:hover {
+	background-color: #3A80FF;
+}
+
