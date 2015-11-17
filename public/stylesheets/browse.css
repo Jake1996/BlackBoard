@@ -1,7 +1,8 @@
 /*General Styles*/
 h2, td {
-    padding: 15px;
+    padding: 20px;
     text-align: center;
+    font-size: 14px;
 }
 
 th {
@@ -15,11 +16,8 @@ div.row1 {
     z-index: -2;
 }
 table {
-<<<<<<< HEAD
 	width: 95%;
-=======
-	width: 100%;
->>>>>>> origin/master
+    background-color: #f2f2f2 !important;
 }
 
 td > a {
