@@ -20,8 +20,8 @@
 	<link rel="stylesheet" type="text/css" href="stylesheets/course.css">
 </head>
 <?php require_once("../includes/layouts/header.php"); ?>
-	<h1>Course Details</h1>
-		<table>
+	<h1 align = center>Course Details</h1>
+		<table align = center>
 			<tr>
 				<td>Course Name : </td>
 				<td><?php echo $course1['courseName']; ?></td>
@@ -52,11 +52,15 @@
 			</tr>
 			<tr>
 				<td>Download : </td>
-				<td><a href="<?php echo $course1['file']; ?>">link</a></td>
+				<td><a href="<?php echo $course1['file']; ?>" class = "button">Notes</a></td>
+			</tr>
+			<tr>
+				<td colspan = 2 style = "text-align: center"><a href="course_edit.php?courseId=<?php echo $course1['courseCode']; ?>" class = "button">Edit Course</a></td>
+			</tr>
+			<tr>
+				<td colspan = 2 style = "text-align: center"><a href="delete_course.php?courseId=<?php echo $course1['courseCode']; ?>" class = "button">Delete Course</a></td>
 			</tr>
 		</table>
 		<br />
-<a href="course_edit.php?courseId=<?php echo $course1['courseCode']; ?>">Edit Course</a>
-<a href="delete_course.php?courseId=<?php echo $course1['courseCode']; ?>">Delete Course</a>
 <?php require_once("../includes/layouts/footer.php"); ?>
 <?php } ?>
