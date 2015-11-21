@@ -15,6 +15,10 @@
 	    $query .= "branch = '{$branch}', ";
 	    $query .= "sem = {$sem}, ";
 	    $query .= "author = '{$author}', ";
+	    if(isset($_FILES['fileToUpload']['name'])) {
+	    	$file = mysql_prep(upload($_FILES["fileToUpload"]));
+	    	$query .= "file = '{$file}', ";
+	    }
 	    $query .= "description = '{$description}' ";
 	    $query .= "WHERE courseCode = '{$courseCode}' ";
 	    $query .= "LIMIT 1";
@@ -72,7 +76,7 @@
 				}
 			?>
 			</p>
-			<form action="course_edit.php?courseId=<?php echo $course1['courseCode']; ?>" method="post">
+			<form action="course_edit.php?courseId=<?php echo $course1['courseCode']; ?>" method="post" enctype="multipart/form-data">
 			<table align = center>
 			<tr>
 				<td width = "30%">Course Code : </td>

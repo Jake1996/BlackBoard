@@ -1,0 +1,12 @@
+Data Structures Assignment #1
+--------------------------------------------
+1. AlternatingSplit() : Write a method which takes one list and divides up its nodes to make two smaller lists. The sublists should be made from alternating elelements in the orginal list. For eg. if the original list is {a,b,a,b,a}, then one sublist should be {a,a,a} and other other should be {b,b}
+
+2. public void insert(int pos, int data) throws PositionException
+Write this method that inserts a new node containing the data to a linklist reference by Header at position given by pos. If pos is 0, insert at beginning and so on. Throw an exception if position is not valid.
+
+3. public int remove(int pos) throws PositionException
+Write this method that removes a node in a linklist reference by Header at position given by pos. If pos is 0, remove at beginning and so on. Return the data from the removed node or 0 otherwise. Throw an exception if position is not valid.
+
+4. Doubly linked List: Given a sorted DLL of integers, write a method that inserts a new node at the proper place in the DLL. Assume HNODE and TNODE are the sentinel nodes of the DLL.
+Public void SortedInsert(int data)

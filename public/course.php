@@ -1,6 +1,7 @@
 <?php require_once("../includes/db_connection.php"); ?>
 <?php require_once("../includes/session.php"); ?>
 <?php require_once("../includes/functions.php"); ?>
+<?php confirm_logged_in(); ?>
 <?php 
 
 	if(!isset($_GET['courseId'])) {
@@ -55,6 +56,7 @@
 				<td><a href="<?php echo $course1['file']; ?>" class = "button">Notes</a></td>
 			</tr>
 			<tr>
+				<td></td>
 				<td style = "text-align: center"><a href="course_edit.php?courseId=<?php echo $course1['courseCode']; ?>" class = "button">Edit Course</a></td>
 				<td style = "text-align: center"><a href="delete_course.php?courseId=<?php echo $course1['courseCode']; ?>" class = "button">Delete Course</a></td>
 			</tr>
