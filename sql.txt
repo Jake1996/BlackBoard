@@ -10,7 +10,7 @@ CREATE TABLE course
     -> file varchar(128),
     -> dateCreated Date
     );
-
+some random change to b deleted later
 #Table for branches
 CREATE TABLE branch
     -> (
